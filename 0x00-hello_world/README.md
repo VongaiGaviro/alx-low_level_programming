@@ -18,3 +18,20 @@ Example: if the C file is main.c, the output file should be main.s
 gcc $CFILE -o cisfun
 script that compiles a C file and creates an executable named cisfun.
 The C file name will be saved in the variable $CFILE
+
+
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
+}
+Is a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+Use the function puts
+You are not allowed to use printf
+Your program should end with the value 0
