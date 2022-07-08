@@ -1,22 +1,30 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
 
 /**
- * main - prints prime numbers
- * Return: Always 0
+ * print_number - prints numbers
+ * @n: number to be printed
+ * Return: void
  */
-int main(void)
+void print_number(int n)
 {
-	long int x = 612852475143;
-	long int py;
+	unsigned int n1 = 0;
 
-	for (py = 2; py < x; py++)
+	if (n < 0)
 	{
-		if (x % py == 0)
-		{
-			x = x / py;
-		}
+		n1 = -n;
+		_putchar('-');
 	}
-	printf("%ld\n", py);
-
-	return (0);
+	else
+	{
+		n1 = n;
+	}
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
+	_putchar((n1 % 10) + '0');
 }
